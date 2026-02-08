@@ -31,8 +31,4 @@ export class CheckoutOverviewPage {
         const items = await this.page.locator('.inventory_item_name').allInnerTexts();
         return items.map(name => name.trim());
     }
-
-    async isOrderComplete() {
-        return this.page.locator('.complete-header').isVisible();
-    }
 }
